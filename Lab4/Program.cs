@@ -13,8 +13,8 @@ namespace Lab4
 {
     class Program
     {
-        private const string EndpointUrl = @"https://localhost:8081/";
-        private const string PrimaryKey = "C2y6yDjf5/R+ob0N8A7Cgv30VRDJIWEHLM+4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw/Jw==";
+        private const string EndpointUrl = @"https://lab2.documents.azure.com:443/";
+        private const string PrimaryKey = "u2z5JpiXmx7IPSIt0SswUPwkACpuw9ohl6aEgoVUlda5Z5P1z9dVQlWDa8sYU2VddBCBRr3CmxuI89Ym19gqdw==";
         private DocumentClient client;
 
         static void Main(string[] args)

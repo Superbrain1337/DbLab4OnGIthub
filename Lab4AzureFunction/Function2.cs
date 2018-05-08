@@ -15,8 +15,8 @@ namespace Lab4AzureFunction
 {
     public static class Function2
     {
-        static string endpoint = @"https://localhost:8081/";
-        static string authKey = "C2y6yDjf5/R+ob0N8A7Cgv30VRDJIWEHLM+4QDU5DE2nQ9nDuVTqobD4b8mGGyPMbIZnqyMsEcaGQy67XIw/Jw==";
+        static string endpoint = @"https://lab2.documents.azure.com:443/";
+        static string authKey = "u2z5JpiXmx7IPSIt0SswUPwkACpuw9ohl6aEgoVUlda5Z5P1z9dVQlWDa8sYU2VddBCBRr3CmxuI89Ym19gqdw==";
 
 
         [FunctionName("Function2")]
