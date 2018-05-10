@@ -65,12 +65,14 @@ namespace Lab4AzureFunction
                     if (mode == "viewReviewQueue")
                     {
                         string returnString = "";
-                        var SqlList = client.CreateDocumentQuery<VerifiedPicture>(UriFactory.CreateDocumentCollectionUri("UserDB", "PictureCollection"), "SELECT {'ID':q.id, 'Adress':q.adress} FROM PictureCollection q");
+                        //var SqlList = client.CreateDocumentQuery<VerifiedPicture>(UriFactory.CreateDocumentCollectionUri("UserDB", "PictureCollection"), "SELECT {'ID':q.id, 'Adress':q.adress} FROM PictureCollection q");
+
+                        IEnumerable<VerifiedPicture> SqlList = client.CreateDocumentQuery<VerifiedPicture>(UriFactory.CreateDocumentCollectionUri("UserDB", "PictureCollection"));
 
                         foreach (var url in SqlList)
                         {
                             VerifiedPicture newUrl = url;
-                            returnString += "\n" + newUrl.ToString();
+                            returnString += $"\n Id = {newUrl.Id} Adress = {newUrl.Adress}\n";
                         }
 
                         return mode == null
